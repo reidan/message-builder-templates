@@ -1,0 +1,61 @@
+<table style="width: 100%;  font-family: {{font_family}}; font-size: {{font_size}}; text-align: center; color: {{colors.text}}; background-color: {{colors.background}}; border: 0; border-collapse: collapse; padding: 0; margin: 0;">
+    <tbody>
+        <tr>
+            <td style="text-align: center; border: 0; padding: 21px 0 0;">
+                <div>
+                    {{#with images.xm_logo}}
+                    <img alt="xMatters" src="{{url}}"{{#if height}} height="{{height}}"{{/if}}{{#if width}} width="{{width}}"{{/if}}>
+                    {{/with}}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center; border: 0; padding: 18px 0 0;">
+                {{#with main_message}}
+                <div>{{#if text}}{{text}}{{/if}}{{#if parts}}{{> xm_parts }}{{/if}}</div>
+                {{/with}}
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 7px 0px 0px; margin: 0; border: 0;">
+                <div style="width:100%; text-align: center;">
+                    <div style="display: inline-block; max-width: {{width.properties_table.max}}; width: 100%;">
+                        <table style="width: 100%; font-size: {{font_size.properties}}; text-align: left; color: {{colors.text_properties}}; background-color: {{colors.background_properties}}; padding: 0; margin: 0; border: 0; border-collapse: collapse">
+                            <tbody>
+                            {{#each rows}}
+                                <tr style="border: solid 1px {{../colors.border_properties}}; {{#if displayProp}}display: {{xm_property displayProp}};{{/if}}">
+                                    <td style="padding: {{../padding.row}};">
+                                    {{#if isStandard}}
+                                        {{#with data}}
+                                        <div><strong>{{label}}</strong></div>
+                                        <div>{{#if property}}{{xm_property property}}{{/if}}{{#if parts}}{{> xm_parts }}{{/if}}</div>
+                                        {{/with}}
+                                    {{else if isLink}}
+                                        {{#with data}}
+                                        <a style="color: {{../../colors.link}};" href="{{#if property}}{{xm_property property}}{{/if}}{{#if parts}}{{> xm_parts }}{{/if}}" >{{text}}</a>
+                                        {{/with}}
+                                    {{else if isImage}}
+                                        <div style="width: 100%; text-align:center">
+                                            {{#with data}}
+                                            <img src="{{#if property}}{{xm_property property}}{{/if}}{{#if parts}}{{> xm_parts }}{{/if}}" />
+                                            {{/with}}
+                                        </div>
+                                    {{/if}}
+                                    </td>
+                                </tr>
+                            {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center; border: 0; padding: 4px 0px 21px;">
+                {{#with images.third_party_logo}}
+                <img src="{{url}}"{{#if height}} height="{{height}}"{{/if}}{{#if width}} width="{{width}}"{{/if}}>
+                {{/with}}
+            </td>
+        </tr>
+    </tbody>
+</table>

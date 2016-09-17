@@ -1,0 +1,43 @@
+{
+	"font_family": "gotham, verdana, sans-serif",
+	"font_size": {
+		"main": "16px",
+		"properties": "14px"
+	},
+	"colors": {
+		"text": "#444444",
+		"background": "#f6f6f6",
+		"text_properties": "#444444",
+		"background_properties": "#fcfcfc",
+		"border_properties": "#e4e4e4"
+	},
+	"padding": {
+		"row": "5px 10px"
+	},
+	"width": {
+		"properties_table": {
+			"max": "800px"
+		}
+	},
+	"images": {
+		"xm_logo": {
+			"url": "https://na1.xmatters.com/static/images/logo.png",
+			"height": "35px"
+		},
+		"third_party_logo": {
+			"url": "",
+			"height": "",
+			"width": ""
+		}
+	},
+	"properties": [
+		{
+			"label": "label",
+			"name": ""
+		}
+	],
+	"main_message": {
+		"text": "",
+		"parts": []
+	}
+}
